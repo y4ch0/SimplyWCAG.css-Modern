@@ -15,6 +15,7 @@
     --wrapper-width-bp-2: 82vw;
     --wrapper-width-bp-3: 92vw;
     --link-color: 0, 81, 255;
+    --intro-height: 30rem;
 }
 
 *:not(i, span.icon) {
@@ -294,6 +295,39 @@ main {
     padding-top: 3rem;
 }
 
+.website-intro {
+    display: flex;
+    flex-direction: column;
+    height: var(--intro-height);
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem !important;
+    background-image: url("intro-bg.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.website-intro .row .col {
+    display: flex;
+    justify-content: center;
+}
+
+.website-intro h1.header-intro {
+    font-size: 3rem;
+    background: #1a329c;
+    background: linear-gradient(to right, #1a329c 0%, #452bb9 100%);
+    background-clip: text;
+    font-weight: 750;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.website-intro h2 {
+    font-weight: 500;
+    text-align: center;
+}
+
 main nav.side-nav {
     width: 15vw;
     position: sticky;
@@ -351,13 +385,15 @@ main:has(aside) div.wrapper {
     width: calc(var(--wrapper-width) - 200px - 1rem);
 }
 
-main div.wrapper .row {
+main div.wrapper .row,
+footer div.wrapper .row {
     width: 100%;
     display: flex;
     gap: 1rem;
 }
 
-main div.wrapper .row .col {
+main div.wrapper .row .col,
+footer div.wrapper .row .col {
     width: 100%;
 }
 
@@ -369,6 +405,11 @@ footer {
     padding: 2rem 0;
     background-color: rgba(0, 0, 0, 0.1);
     margin-top: 4rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
 }
 
 footer .wrapper {
@@ -490,6 +531,25 @@ input[type="range"] {
     margin: 0.75rem 0;
 }
 
+input[type="file"] {
+    cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+    cursor: pointer;
+    background-color: rgb(var(--primary-button-color));
+    color: rgb(var(--primary-button-text));
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    transition: background-color 80ms ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+    text-decoration: underline;
+    background-color: rgb(var(--primary-button-color-hover));
+}
+
 .form-group {
     width: 100%;
     display: flex;
@@ -518,12 +578,14 @@ input[type="range"] {
 
 .form-group:has(input[type="range"]) span.start-value {
     bottom: 0;
-    left: 0;
+    left: 5px;
+    pointer-events: none;
 }
 
 .form-group:has(input[type="range"]) span.end-value {
     bottom: 0;
     right: 0;
+    pointer-events: none;
 }
 
 .form-group:has(input[type="range"]) ul.steps-indicator {
@@ -531,14 +593,15 @@ input[type="range"] {
     color: rgba(0, 0, 0, 0.65);
     font-weight: 600;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 5px);
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-between;
     bottom: 0;
-    left: 0;
+    left: 5px;
     margin: 0;
+    pointer-events: none;
 }
 
 h1,
@@ -615,7 +678,7 @@ details {
 
 details summary {
     font-size: 1.25rem;
-    padding: 1rem;
+    padding: 0.75rem 1rem;
     color: rgb(var(--primary-color));
     cursor: pointer;
 }
@@ -849,8 +912,8 @@ dialog[open] div.body {
 }
 
 .alert.information {
-    border-left: 0.5rem solid rgb(0, 82, 165);
-    background-color: rgba(0, 82, 165, 0.1);
+    border-left: 0.5rem solid rgb(0, 155, 216);
+    background-color: rgba(0, 155, 216, 0.1);
 }
 
 .alert.outlined.information {
@@ -922,14 +985,14 @@ dialog[open] div.body {
     width: auto;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
-    font-size: 0.95rem;
-    margin: 0.25rem;
+    font-size: 0.85rem;
+    margin: 0.25rem 0.25rem 0.25rem 0;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.1);
 }
 
 .badge.information {
-    background-color: rgba(0, 82, 165, 0.85);
+    background-color: rgba(0, 155, 216, 0.85);
     color: #fff;
 }
 
@@ -1229,8 +1292,9 @@ aside ul.aside-items li.current a {
 }
 
 span.details-mark {
-    width: 2rem;
-    height: 2rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0.15rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1239,6 +1303,10 @@ span.details-mark {
     font-weight: 600;
     color: rgb(var(--primary-color)) !important;
     border: 0.2rem solid rgb(var(--primary-color));
+    cursor: help;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .custom-tooltip {
@@ -1248,12 +1316,12 @@ span.details-mark {
     padding: 6px 10px;
     border-radius: 0.25rem;
     font-size: 0.8rem;
-    white-space: nowrap;
     max-width: 95vw;
+    width: fit-content;
     overflow: hidden;
     text-overflow: ellipsis;
     visibility: hidden;
-    z-index: 1000;
+    z-index: 99999;
     pointer-events: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: opacity 0.2s ease-in-out;
@@ -1264,7 +1332,7 @@ span.details-mark {
     nav .wrapper,
     main div.wrapper,
     footer .wrapper {
-        width: var(--wrapper-width-bp-1) !important;
+        width: var(--wrapper-width-bp-1);
     }
     nav ul.nav {
         display: flex;
@@ -1277,11 +1345,11 @@ span.details-mark {
         display: none;
     }
     main nav.side-nav {
-        width: var(--wrapper-width-bp-2) !important;
+        width: var(--wrapper-width-bp-2);
         position: static;
     }
     header.accessibility-tools .wrapper {
-        width: var(--wrapper-width-bp-1) !important;
+        width: var(--wrapper-width-bp-1);
     }
 }
 
@@ -1290,7 +1358,7 @@ span.details-mark {
     nav .wrapper,
     main div.wrapper,
     footer .wrapper {
-        width: var(--wrapper-width-bp-2) !important;
+        width: var(--wrapper-width-bp-2);
     }
     main .wrapper .row {
         flex-direction: column;
@@ -1324,7 +1392,13 @@ span.details-mark {
         max-height: 70%;
     }
     header.accessibility-tools .wrapper {
-        width: var(--wrapper-width-bp-2) !important;
+        width: var(--wrapper-width-bp-2);
+    }
+    .website-intro h1.header-intro {
+        font-size: 2.2rem;
+    }
+    .website-intro h2 {
+        font-size: 1.5rem;
     }
 }
 
@@ -1333,12 +1407,13 @@ span.details-mark {
     nav .wrapper,
     main div.wrapper,
     footer .wrapper {
-        width: var(--wrapper-width-bp-3) !important;
+        width: var(--wrapper-width-bp-3);
     }
     header.gov-mark .wrapper .row {
         flex-direction: column;
     }
-    main .wrapper .row {
+    main .wrapper .row,
+    footer .wrapper .row {
         flex-direction: column;
     }
     nav {
