@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="simplywcag-css-modern.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home"
+        />
+        <script src="accessibility.js"></script>
+        <script src="utility.js"></script>
+    </head>
+    <body>
+        <!--<header class="gov-mark">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col">
+                        <p class="header-paragraph">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/200px-Flag_of_Poland.svg.png"
+                                class="flag"
+                            />
+                            Oficjalna strona Rzeczypospolitej Polskiej
+                            <a class="toggler">Skąd o tym wiem?</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="explanation">
+                <div class="wrapper">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Oficjalne strony RP używają domeny .gov.pl</h3>
+                            <p>
+                                Strony, które mają zakończony adres strony
+                                <strong>.gov.pl</strong> są nadzorowane przez ministra właściwego ds. cyfryzacji
+                            </p>
+                        </div>
+                        <div class="col">
+                            <h3>Zabezpieczenia strony RP</h3>
+                            <p>
+                                Strony zarządzane przez ministra właściwego ds. cyfryzacji posiadają certyfikat bezpieczeństwa, oraz ich adres
+                                rozpoczyna się od
+                                <strong>https://</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>-->
+        <header class="accessibility-tools">
+            <div class="wrapper">
+                <div class="row">
+                    <p>Wielkość tekstu:</p>
+                    <a href="#" class="at-fs-1" title="Normalny rozmiar tekstu">A</a>
+                    <a href="#" class="at-fs-2" title="Powiększony rozmiar tekstu">AA</a>
+                    <a href="#" class="at-fs-3" title="Największy rozmiar tekstu">AAA</a>
+                </div>
+                <div class="row">
+                    <p>Kontrast:</p>
+                    <a href="#" class="at-c-1" title="Tryb kontrastu wyłączony">A</a>
+                    <a href="#" class="at-c-2" title="Tryb kontrastu: Zielono (tekst)-Czarny (tło)">A</a>
+                    <a href="#" class="at-c-3" title="Tryb kontrastu: Czarno (tekst)-Żółty (tło)">A</a>
+                    <a href="#" class="at-c-4" title="Tryb kontrastu: Żółto (tekst)-Czarny (tło)">A</a>
+                    <a href="#" class="at-c-5" title="Tryb kontrastu: Biało (tekst)-Czarny (tło)">A</a>
+                </div>
+            </div>
+        </header>
+        <nav>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#" class="website-logo">
+                        <img src="logo_notext.svg" alt="" />
+                    </a>
+                </div>
+                <ul id="nav-menu" class="nav">
+                    <button class="nav-collapse">
+                        <img src="x-lg.svg" alt="Navigation menu close icon" />
+                    </button>
+                    <li><a href="#">Link nawigacyjny</a></li>
+                    <li><a href="#">Link nawigacyjny</a></li>
+                    <li><a href="#">Link nawigacyjny</a></li>
+                    <li><a href="#">Link nawigacyjny</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a href="#" class="toggler">Link nawigacyjny</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Element listy rozwijalnej</a>
+                                </li>
+                                <li>
+                                    <a href="#">Element listy rozwijalnej</a>
+                                </li>
+                                <li>
+                                    <a href="#">Element listy rozwijalnej</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <button class="nav-collapse">
+                    <img src="list.svg" alt="Navigation menu open icon" />
+                </button>
+            </div>
+        </nav>
+        <main>
+            <!--<nav class="side-nav">
+                <ul class="nav">
+                    <li class="current"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                </ul>
+            </nav>-->
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col">
+                        <h3>Multi-column row</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h2>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h4>
+                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h5>
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h6>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis reiciendis voluptatem delectus ex praesentium
+                            ipsa. Odio aspernatur eveniet ipsa. Esse, illo quod. Quibusdam aperiam praesentium ipsa aspernatur amet quas inventore cum
+                            totam, hic voluptate deleniti, adipisci quasi ipsam numquam? Dolor, sapiente veritatis sit dolorem optio numquam error
+                            dicta commodi?
+                        </p>
+                    </div>
+                    <div class="col">
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h2>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h4>
+                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h5>
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h6>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quis reiciendis voluptatem delectus ex praesentium
+                            ipsa. Odio aspernatur eveniet ipsa. Esse, illo quod. Quibusdam aperiam praesentium ipsa aspernatur amet quas inventore cum
+                            totam, hic voluptate deleniti, adipisci quasi ipsam numquam? Dolor, sapiente veritatis sit dolorem optio numquam error
+                            dicta commodi?
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Headers</h3>
+                        <hr />
+                        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h1>
+                        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h2>
+                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h3>
+                        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h4>
+                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h5>
+                        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, iusto?</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Link</h3>
+                        <p>
+                            <a href="#"
+                                >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit rerum tenetur, quae nulla blanditiis id maiores.
+                                Dolor quo illum perspiciatis.
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Buttons</h3>
+                        <button class="button primary">Pierwszy priorytet</button>
+                        <button class="button secondary">Drugi priorytet</button>
+                        <button class="button outlined">Trzeci priorytet</button>
+                        <button class="button">Bez priorytetu</button>
+                        <button class="button primary" disabled>Niedostępny</button>
+                        <a class="button primary">Pierwszy priorytet</a>
+                        <a class="button secondary">Drugi priorytet</a>
+                        <a class="button outlined">Trzeci priorytet</a>
+                        <a class="button">Bez priorytetu</a>
+                        <a class="button secondary" aria-disabled="true">Niedostępny (aria-disabled)</a>
+                        <a class="button primary big">
+                            <!--<span class="icon"><img src="list.svg" alt="" /></span>-->
+                            <span>Pierwszy priorytet (duży przycisk)</span>
+                        </a>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col">
+                        <h3>Form group/Form control (inputs)</h3>
+                        <div class="form-group">
+                            <label>Imię</label>
+                            <input type="text" class="form-control" value="Adrian" />
+                        </div>
+                        <div class="form-group">
+                            <label>Data urodzenia</label>
+                            <input type="date" class="form-control" value="2006-03-03" />
+                        </div>
+                        <div class="form-group">
+                            <label>Waga (kg)</label>
+                            <input type="number" class="form-control" value="85" />
+                        </div>
+                        <div class="form-group">
+                            <label>Zdjęcie</label>
+                            <input type="file" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Suwak</label>
+                            <input type="range" class="form-control" min="1" max="10" value="1" step="1" />
+                            <span class="start-value">0</span>
+                            <span class="end-value">10</span>
+                        </div>
+                        <div class="form-group">
+                            <label>Suwak</label>
+                            <input type="range" class="form-control" min="1" max="10" value="1" step="1" />
+                            <ul class="steps-indicator">
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                            </ul>
+                        </div>
+                        <div class="form-group">
+                            <label>Płeć</label>
+                            <select class="form-control">
+                                <option value="input1">Option 1</option>
+                                <option value="input2">Option 2</option>
+                                <option value="input3">Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <form action="formularz.php" method="get" class="col">
+                        <h3>Form</h3>
+                        <h4>Redirect to <code>.php</code> file after submit.</h4>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label>Imię</label>
+                                    <input type="text" class="form-control" value="Adrian" name="imie" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Data urodzenia</label>
+                                    <input type="date" class="form-control" value="2006-03-03" name="data" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Waga (kg)</label>
+                                    <input type="number" class="form-control" value="85" name="waga" />
+                                </div>
+                                <div class="form-group">
+                                    <label>Płeć</label>
+                                    <select class="form-control" name="plec">
+                                        <option value="input1">Option 1</option>
+                                        <option value="input2">Option 2</option>
+                                        <option value="input3">Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                            <div class="col"></div>
+                        </div>
+                        <div class="row">
+                            <button type="submit" class="button primary">Zapisz</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Details</h3>
+                        <details>
+                            <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                        </details>
+                        <details>
+                            <summary>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, fugit?</summary>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim provident consequuntur odit eveniet unde, tempore cum
+                                tenetur quisquam ipsa expedita hic in illum assumenda debitis atque molestias officiis veritatis minima!
+                            </p>
+                        </details>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Table</h3>
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <th>Nazwa dokumentu</th>
+                                    <th>Opis</th>
+                                    <th>Rok wydania</th>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius beatae ex voluptas? Quibusdam
+                                        pariatur alias laboriosam facere dolorum.
+                                    </td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius beatae ex voluptas? Quibusdam
+                                        pariatur alias laboriosam facere dolorum.
+                                    </td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius beatae ex voluptas? Quibusdam
+                                        pariatur alias laboriosam facere dolorum.
+                                    </td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius beatae ex voluptas? Quibusdam
+                                        pariatur alias laboriosam facere dolorum.
+                                    </td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius beatae ex voluptas? Quibusdam
+                                        pariatur alias laboriosam facere dolorum.
+                                    </td>
+                                    <td>2025</td>
+                                </tr>
+                                <tr>
+                                    <td>Lorem ipsum dolor sit amet.</td>
+                                    <td>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia architecto eius beatae ex voluptas? Quibusdam
+                                        pariatur alias laboriosam facere dolorum.
+                                    </td>
+                                    <td>2025</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Dropdown</h3>
+                        <div class="dropdown">
+                            <a class="button primary toggler">Dropdown toggler</a>
+                            <ul>
+                                <li><a href="#">Dropdown item</a></li>
+                                <li><a href="#">Dropdown item</a></li>
+                                <li><a href="#">Dropdown item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Card</h3>
+                        <h4>Full-column width</h4>
+                        <div class="card">
+                            <img src="https://placehold.co/500x100" alt="" class="card-image" />
+                            <h4>Lorem ipsum dolor sit amet.</h4>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                            </p>
+                            <a href="#" class="button outlined">Przeczytaj</a>
+                        </div>
+                        <h3>Block cards</h3>
+                        <h4>No border; With background; Without button</h4>
+                        <div class="block-cards">
+                            <div class="card background no-border">
+                                <big class="header-primary"><strong>BMI</strong> 28.40</big>
+                            </div>
+                            <div class="card background no-border">
+                                <big class="header-primary"><strong>BMI</strong> 28.40</big>
+                            </div>
+                            <div class="card background no-border">
+                                <big class="header-primary"><strong>BMI</strong> 28.40</big>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Block cards</h3>
+                        <h4>Classic cards</h4>
+                        <div class="block-cards">
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="block-cards no-border">
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                            <div class="card">
+                                <img src="https://placehold.co/500x150" alt="" class="card-image" />
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                                <a href="#" class="button outlined">Przeczytaj</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Block cards</h3>
+                        <h4>Cards as <code>&lt;a></code></h4>
+                        <div class="block-cards">
+                            <a href="#" class="card">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                            </a>
+                            <a href="#" class="card">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                            </a>
+                            <a href="#" class="card">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                            </a>
+                        </div>
+                        <h3>Block cards</h3>
+                        <h4>No border (cards as <code>&lt;a></code>)</h4>
+                        <div class="block-cards no-border">
+                            <a href="#" class="card">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                            </a>
+                            <a href="#" class="card">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                            </a>
+                            <a href="#" class="card">
+                                <h4>Lorem ipsum dolor sit amet.</h4>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, omnis voluptate aspernatur ipsam consectetur rerum
+                                    magnam illo nesciunt explicabo! Aperiam iusto itaque animi rerum temporibus.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Block cards</h3>
+                        <h4>No border; Centered; Small</h4>
+                        <div class="block-cards no-border small">
+                            <a href="#" class="card centered">
+                                <div class="image-centered"><img src="https://placehold.co/150x150" alt="" /></div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card centered">
+                                <div class="image-centered"><img src="https://placehold.co/150x150" alt="" /></div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card centered">
+                                <div class="image-centered"><img src="https://placehold.co/150x150" alt="" /></div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card centered">
+                                <div class="image-centered"><img src="https://placehold.co/150x150" alt="" /></div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card centered">
+                                <div class="image-centered"><img src="https://placehold.co/150x150" alt="" /></div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card centered">
+                                <div class="image-centered"><img src="https://placehold.co/150x150" alt="" /></div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card centered">
+                                <div class="image-centered"><img src="https://placehold.co/150x150" alt="" /></div>
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                        </div>
+                        <h4>No border; Small</h4>
+                        <div class="block-cards no-border small">
+                            <a href="#" class="card">
+                                <img src="https://placehold.co/150x150" alt="" />
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card">
+                                <img src="https://placehold.co/150x150" alt="" />
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card">
+                                <img src="https://placehold.co/150x150" alt="" />
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card">
+                                <img src="https://placehold.co/150x150" alt="" />
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card">
+                                <img src="https://placehold.co/150x150" alt="" />
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card">
+                                <img src="https://placehold.co/150x150" alt="" />
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                            <a href="#" class="card">
+                                <img src="https://placehold.co/150x150" alt="" />
+                                <h4>Lorem, ipsum dolor.</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Image</h3>
+                        <img src="https://placehold.co/1920x200" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Modal (dialog)</h3>
+                        <button class="button primary dialog-open" data-dialog_id="dialog1">Open dialog id 1</button>
+                        <button class="button primary dialog-open" data-dialog_id="dialog2">Open dialog id 2</button>
+                        <dialog id="dialog1">
+                            <div class="body">
+                                <h2>Dialog with id 1</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fuga.</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias totam atque aut error quos consequatur
+                                    recusandae. Dolore cum assumenda iste, praesentium et non nisi error deserunt quae eius nam, necessitatibus
+                                    debitis sit alias! Repellat debitis libero, dolores, corrupti sed minima delectus odit, incidunt illum ducimus
+                                    excepturi nostrum quidem. Perferendis magni totam delectus dignissimos. Repellat, porro reprehenderit eligendi
+                                    officia beatae sit obcaecati commodi quaerat quas! Vitae est sequi deserunt voluptate iste provident numquam ipsa
+                                    saepe quam, maxime officia minima accusamus obcaecati odit ratione incidunt, vel quaerat porro inventore dolor
+                                    doloremque aliquid eligendi, sunt quo? Accusantium animi repellat quos laudantium mollitia ea, excepturi eveniet
+                                    voluptatum dignissimos nulla, soluta dolor! Delectus esse velit iusto numquam ducimus repellat culpa, recusandae
+                                    debitis natus impedit ex, corrupti consequatur! Doloremque ipsum harum, sapiente obcaecati voluptate odio vero
+                                    necessitatibus asperiores, amet veniam eaque aliquid quam, nisi molestias consectetur commodi alias. Nulla
+                                    praesentium facilis temporibus! Sequi temporibus consequuntur voluptas expedita iure quasi obcaecati nihil
+                                    repudiandae placeat voluptatibus, laudantium tempore voluptates quia hic iste quis error facere adipisci? Ratione,
+                                    eum consectetur nam magni placeat ipsum, iusto quo impedit eos, reiciendis fugiat pariatur corrupti debitis earum
+                                    natus cum! Animi molestiae cumque qui veritatis dolorem, vero neque asperiores provident expedita, itaque amet?
+                                </p>
+                                <button class="dialog-close" data-dialog_id="dialog1">&times;</button>
+                            </div>
+                        </dialog>
+                        <dialog id="dialog2">
+                            <div class="body">
+                                <h2>Logowanie</h2>
+                                <form action="" autocomplete="off">
+                                    <div class="form-group">
+                                        <label for="login">Login</label>
+                                        <input type="text" name="login" id="login" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass">Hasło</label>
+                                        <input type="password" name="pass" id="pass" class="form-control" />
+                                    </div>
+                                    <p><a href="#">Zapomniałem hasła</a></p>
+                                    <p><a href="#">Rejestracja konta</a></p>
+                                    <button type="submit" class="button primary">Zaloguj się</button>
+                                </form>
+                                <button class="dialog-close" data-dialog_id="dialog2">&times;</button>
+                            </div>
+                        </dialog>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Alert</h3>
+                        <div class="alert slim error">
+                            <div class="data">
+                                <p>Wystąpił błąd przy zapisie pliku.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Form progress</h3>
+                        <div class="form-progress">
+                            <div class="bars">
+                                <div class="bar complete"></div>
+                                <div class="bar"></div>
+                                <div class="bar"></div>
+                            </div>
+                            <div class="description">
+                                <h2 class="progress-heading">
+                                    <span class="current-step">1</span>
+                                    <span class="steps-left">z 3</span>
+                                </h2>
+                                <h3>Dane osobowe</h3>
+                                <p>Podaj swoje dane osobowe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Button group</h3>
+                        <div class="button-group fit-text">
+                            <button class="button primary">Przycisk 1</button>
+                            <button class="button primary">Przycisk 2</button>
+                            <button class="button primary">Przycisk 3</button>
+                        </div>
+                        <hr />
+                        <div class="button-group">
+                            <button class="button outlined">Przycisk 1</button>
+                            <button class="button outlined">Przycisk 2</button>
+                            <button class="button outlined">Przycisk 3</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Progress bar</h3>
+                        <progress max="100" value="30">30%</progress>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Process list</h3>
+                        <div class="process-list">
+                            <ol class="process-list">
+                                <li class="step-item">
+                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo, voluptatibus nostrum ea
+                                        cumque rerum quas officia totam.
+                                    </p>
+                                    <ul>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, temporibus.</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, temporibus.</li>
+                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, temporibus.</li>
+                                    </ul>
+                                </li>
+                                <li class="step-item">
+                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo, voluptatibus nostrum ea
+                                        cumque rerum quas officia totam.
+                                    </p>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo, voluptatibus nostrum ea
+                                        cumque rerum quas officia totam.
+                                    </p>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo, voluptatibus nostrum ea
+                                        cumque rerum quas officia totam.
+                                    </p>
+                                </li>
+                                <li class="step-item">
+                                    <h4>Lorem ipsum dolor sit amet.</h4>
+                                    <p>
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis eos neque nemo, voluptatibus nostrum ea
+                                        cumque rerum quas officia totam.
+                                    </p>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Breadcrumb</h3>
+                        <ul class="breadcrumb">
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h3>Summary box</h3>
+                        <div class="summary-box">
+                            <h4>Kluczowe informacje</h4>
+                            <ul>
+                                <li>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, cumque?
+                                    <span class="details-mark" title="Pamiętaj o uzupełnianiu brakujących informacji.">i</span>
+                                </li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate hic natus suscipit possimus eaque magni?</li>
+                                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo porro iste et consequuntur corporis at?</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="details-mark" title="Wybierz plan żywieniowy dopasowany do potrzeb.">i</span>
+                        <button class="button primary" title="Wybierz plan żywieniowy dopasowany do potrzeb.">Przycisk</button>
+                    </div>
+                </div>
+            </div>
+            <!--<aside>
+                <h5>na tej stronie</h5>
+                <ul class="aside-items">
+                    <li class="current"><a href="#">Lorem, ipsum dolor.</a></li>
+                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                </ul>
+            </aside>-->
+        </main>
+        <footer>
+            <div class="wrapper">
+                <p>&copy; 2025 y4ch0</p>
+            </div>
+        </footer>
+    </body>
+</html>
