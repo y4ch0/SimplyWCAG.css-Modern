@@ -1177,7 +1177,7 @@ progress::-webkit-progress-value {
     margin-bottom: 5px;
     display: flex;
     flex-direction: column;
-    padding: 0 0 0 1.5rem;
+    padding: 0.15rem 0 0 1.5rem;
 }
 
 .process-list ol.process-list li.step-item::before {
@@ -1371,6 +1371,47 @@ span.details-mark {
 .card-switch ul.togglers li a.card-toggler.current {
     background-color: rgb(var(--primary-button-color)) !important;
     color: rgb(var(--primary-button-text)) !important;
+}
+
+div.spinner {
+    min-width: 2.5rem;
+}
+
+div.spinner.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.spinner span.spinner {
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    align-items: center;
+    border: 0.35rem solid #d4d4d4;
+    animation: spinner_spin 900ms infinite linear;
+}
+
+div.spinner span.spinner::after {
+    content: "";
+    display: flex;
+    width: 1.55rem;
+    height: 1.5rem;
+    background-color: #fff;
+    aspect-ratio: 1/1;
+    rotate: 45deg;
+    position: absolute;
+    right: -50%;
+}
+
+@keyframes spinner_spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
 }
 
 @media screen and (max-width: 1280px) {
