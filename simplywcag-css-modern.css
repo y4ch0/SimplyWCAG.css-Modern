@@ -193,6 +193,15 @@ header.gov-mark #explanation.show {
     display: flex;
 }
 
+header.website-warning {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffbb00 !important;
+    text-align: center;
+}
+
 nav {
     width: 100%;
     display: flex;
@@ -342,6 +351,23 @@ main nav.side-nav {
     flex-direction: column;
     box-shadow: none !important;
     z-index: 1;
+}
+
+main nav.side-nav ul li ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+main nav.side-nav ul li ul li::before {
+    content: "";
+    height: calc(100% - 4px);
+    width: 3px;
+    background-color: rgb(var(--primary-color));
+    position: absolute;
+    top: 2px;
+    left: -0.5rem;
 }
 
 main nav.side-nav ul.nav {
@@ -1490,6 +1516,78 @@ div.spinner span.spinner::after {
     100% {
         rotate: 360deg;
     }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slider .slides .slide {
+    min-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5rem;
+}
+.slider .slides .slide img {
+    width: calc(100% + 10rem) !important;
+    max-width: unset !important;
+    margin-left: -5rem;
+    display: block;
+}
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    width: 2.5rem;
+    height: 4rem;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.slider-button img {
+    height: 100%;
+    width: calc(100% + 2.5rem);
+    max-width: unset !important;
+    opacity: 0.5;
+}
+.swipe-left {
+    left: 10px;
+}
+.swipe-right {
+    right: 10px;
+}
+.current-slide-indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.current-slide-indicator li {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.current-slide-indicator li.active {
+    background: rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (max-width: 1280px) {

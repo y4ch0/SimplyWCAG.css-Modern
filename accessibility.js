@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Pobieramy wszystkie elementy oraz priorytetowe
     const allElements = document.querySelectorAll("*:not(.accessibility-tools)"); // Wyklucz header
     const priorityElements = document.querySelectorAll(
-        "button, a, input, select, textarea, label, .dropdown > ul, summary, .header-primary, .header-secondary, .card p, .card h4, .details-mark, span.spinner"
+        "button, a, input, select, textarea, label, .dropdown ul, summary, .header-primary, .header-secondary, .card p, .card h4, .details-mark, span.spinner, .card-switch h1, .summary-box"
     );
 
     // Obsługa zmiany rozmiaru czcionki
