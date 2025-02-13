@@ -1355,6 +1355,14 @@ code {
     border-radius: 0.25rem;
 }
 
+pre {
+    font-family: monospace !important;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1rem;
+    border-radius: 0.25rem;
+}
+
 aside {
     width: 200px;
     height: 100% !important;
