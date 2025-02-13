@@ -749,6 +749,10 @@ table tr td {
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
+div.dropdown {
+    display: inline-flex;
+}
+
 div.dropdown ul {
     display: none;
     list-style: none;
@@ -776,7 +780,15 @@ div.dropdown ul li a {
     padding: 0.25rem 0.5rem;
     display: flex;
     gap: 0.5rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+div.dropdown.primary ul li a {
     color: rgb(var(--primary-color));
+}
+
+div.dropdown.secondary ul li a {
+    color: rgb(var(--secondary-color));
 }
 
 div.dropdown ul li a:hover {
