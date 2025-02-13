@@ -16,6 +16,7 @@
     --wrapper-width-bp-3: 92vw;
     --link-color: 0, 81, 255;
     --intro-height: 30rem;
+    interpolate-size: allow-keywords;
 }
 
 *:not(i, span.icon) {
@@ -354,20 +355,10 @@ main nav.side-nav {
 }
 
 main nav.side-nav ul li ul {
-    list-style: none;
+    list-style: square !important;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-}
-
-main nav.side-nav ul li ul li::before {
-    content: "";
-    height: calc(100% - 4px);
-    width: 3px;
-    background-color: rgb(var(--primary-color));
-    position: absolute;
-    top: 2px;
-    left: -0.5rem;
 }
 
 main nav.side-nav ul.nav {
@@ -702,6 +693,8 @@ details {
     width: 100%;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
 }
 
 details summary {
@@ -709,6 +702,7 @@ details summary {
     padding: 0.75rem 1rem;
     color: rgb(var(--primary-color));
     cursor: pointer;
+    margin: -1rem;
 }
 
 details summary:hover {
@@ -716,15 +710,19 @@ details summary:hover {
 }
 
 details[open] summary {
-    margin: -1rem;
     margin-bottom: 0.5rem;
-    width: calc(100% + 2rem);
-    max-width: unset !important;
+    width: 100%;
 }
 
-details[open] {
-    padding: 1rem;
+/*details::details-content {
+    block-size: 0;
+    transition: block-size 0.2s ease-in-out, content-visibility 0.2s ease-in-out;
+    transition-behavior: allow-discrete;
 }
+
+details[open]::details-content {
+    block-size: auto;
+}*/
 
 .table {
     width: 100%;
@@ -787,6 +785,7 @@ div.dropdown ul li a:hover {
 
 div.dropdown ul.show {
     display: block;
+    animation: dropdown-show 0.15s ease-in-out forwards;
 }
 
 div.dropdown:has(ul.show) a.toggler::after {
@@ -1509,15 +1508,6 @@ div.spinner span.spinner::after {
     right: -50%;
 }
 
-@keyframes spinner_spin {
-    0% {
-        rotate: 0deg;
-    }
-    100% {
-        rotate: 360deg;
-    }
-}
-
 .slider {
     position: relative;
     width: 100%;
@@ -1588,6 +1578,28 @@ div.spinner span.spinner::after {
 }
 .current-slide-indicator li.active {
     background: rgba(0, 0, 0, 0.75);
+}
+
+@keyframes dropdown-show {
+    0% {
+        top: calc(100% - 5px);
+        opacity: 0;
+        transform: scale(0.97);
+    }
+    100% {
+        top: 100%;
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes spinner_spin {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
 }
 
 @media screen and (max-width: 1280px) {
