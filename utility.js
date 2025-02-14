@@ -173,4 +173,17 @@ document.addEventListener("DOMContentLoaded", function () {
         prevButton.addEventListener("click", prevSlide);
         updateIndicators();
     });
+    document.addEventListener("click", function (event) {
+        let target = event.target;
+
+        // Sprawdzenie, czy kliknięty element lub jego rodzic posiada data-href
+        while (target && target !== document) {
+            let href = target.getAttribute("data-href");
+            if (href) {
+                window.location.href = href;
+                break;
+            }
+            target = target.parentElement;
+        }
+    });
 });

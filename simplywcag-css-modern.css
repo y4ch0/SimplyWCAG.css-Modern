@@ -4,6 +4,7 @@
     --root-font: "Open Sans", "Inter", sans-serif;
     --primary-color: 26, 50, 156;
     --secondary-color: 59, 37, 158;
+    --link-color: 0, 81, 255;
     --primary-button-color: var(--primary-color);
     --primary-button-text: 255, 255, 255;
     --primary-button-color-hover: 39, 67, 192;
@@ -14,8 +15,17 @@
     --wrapper-width-bp-1: 75vw;
     --wrapper-width-bp-2: 82vw;
     --wrapper-width-bp-3: 92vw;
-    --link-color: 0, 81, 255;
     --intro-height: 30rem;
+    --input-label-color: var(--primary-color);
+    --sidenav-text-color: var(--primary-color);
+    --navbar-text-color: var(--primary-color);
+    --details-label-color: var(--primary-color);
+    --card-outline-color: var(--secondary-color);
+    --progress-bar-color: var(--primary-color);
+    --process-list-divider-color: var(--primary-color);
+    --info-circle-color: var(--primary-color);
+    --tab-switch-link-color: var(--primary-color);
+    --form-progress-bar-color: var(--primary-color);
     interpolate-size: allow-keywords;
 }
 
@@ -267,13 +277,13 @@ nav ul.nav {
 }
 
 nav ul.nav li a {
-    color: rgb(var(--primary-color));
+    color: rgb(var(--navbar-text-color));
     display: flex;
     gap: 0.5rem;
 }
 
 nav.side-nav ul.nav li.current a {
-    background-color: rgba(var(--primary-color), 0.1);
+    background-color: rgba(var(--sidenav-text-color), 0.1);
 }
 
 nav button.nav-collapse {
@@ -370,10 +380,11 @@ main nav.side-nav ul.nav {
 main nav.side-nav ul.nav li,
 main nav.side-nav ul.nav li a {
     width: 100%;
+    color: rgb(var(--sidenav-text-color));
 }
 
 main nav.side-nav ul.nav li a {
-    padding: 0.35rem;
+    padding: 0.3rem 0.5rem;
     border-radius: 0.25rem;
     transition: background-color 80ms ease-in-out;
 }
@@ -440,7 +451,7 @@ footer .wrapper {
     align-items: center;
     cursor: pointer;
     border: 2px solid transparent;
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.5;
     padding: 0.35rem 1.15rem;
     margin: 0.25rem 0.25rem 0.25rem 0;
@@ -448,7 +459,7 @@ footer .wrapper {
     color: rgb(var(--primary-color));
     border-radius: 0.25rem;
     transition: all 80ms ease-in-out;
-    font-weight: 450;
+    font-weight: 550 !important;
     transition-property: background-color, color, border;
     text-align: center;
 }
@@ -578,7 +589,7 @@ input[type="file"]::file-selector-button:hover {
 
 .form-group label {
     font-weight: 550;
-    color: rgb(var(--primary-color));
+    color: rgb(var(--input-label-color));
     margin: 0.25rem 0;
     cursor: pointer;
 }
@@ -700,7 +711,7 @@ details {
 details summary {
     font-size: 1.25rem;
     padding: 0.75rem 1rem;
-    color: rgb(var(--primary-color));
+    color: rgb(var(--details-label-color));
     cursor: pointer;
     margin: -1rem;
 }
@@ -733,6 +744,10 @@ table {
     min-width: 100%;
     max-width: max-content !important;
     border-collapse: collapse;
+}
+
+table tr:not(:first-child):hover {
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 table tr th {
@@ -903,7 +918,7 @@ div.dropdown:has(ul.show) a.toggler::after {
 }
 
 .card:is(a):hover {
-    outline: 0.25rem solid rgb(var(--secondary-color));
+    outline: 0.25rem solid rgb(var(--card-outline-color));
 }
 
 .card img.card-image {
@@ -1152,7 +1167,7 @@ dialog[open] div.body {
 }
 
 .form-progress .bars .bar.complete {
-    background-color: rgb(var(--primary-color));
+    background-color: rgb(var(--form-progress-bar-color));
 }
 
 .form-progress .description h2.progress-heading {
@@ -1163,7 +1178,7 @@ dialog[open] div.body {
 }
 
 .form-progress .description h2.progress-heading .current-step {
-    background-color: rgb(var(--primary-color));
+    background-color: rgb(var(--form-progress-bar-color));
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
@@ -1271,7 +1286,7 @@ progress::-webkit-progress-bar {
     border-radius: 0.35rem;
 }
 progress::-webkit-progress-value {
-    background-color: rgb(var(--primary-color));
+    background-color: rgb(var(--progress-bar-color));
     border-radius: 0.35rem 0 0 0.35rem;
 }
 
@@ -1318,7 +1333,7 @@ progress::-webkit-progress-value {
     position: absolute;
     top: 3rem;
     left: -0.5rem;
-    background-color: rgb(var(--primary-color));
+    background-color: rgb(var(--process-list-divider-color));
 }
 
 .process-list ol.process-list li.step-item:last-child::after {
@@ -1390,7 +1405,8 @@ aside ul.aside-items li a {
     padding: 0.25rem 0;
     width: 100%;
     display: flex;
-    color: rgb(var(--primary-color)) !important;
+    /*color: rgb(var(--primary-color)) !important;*/
+    color: #000 !important;
 }
 
 aside ul.aside-items li a:hover::after,
@@ -1426,8 +1442,8 @@ span.details-mark {
     font-size: 1.25rem;
     border-radius: 2rem;
     font-weight: 600;
-    color: rgb(var(--primary-color)) !important;
-    border: 0.2rem solid rgb(var(--primary-color));
+    color: rgb(var(--info-circle-color)) !important;
+    border: 0.2rem solid rgb(var(--info-circle-color));
     cursor: help;
     user-select: none;
     -moz-user-select: none;
@@ -1464,7 +1480,7 @@ span.details-mark {
     padding: 0;
     margin: 0;
     list-style: none;
-    border-bottom: 2px solid rgb(var(--primary-button-color));
+    border-bottom: 2px solid rgb(var(--tab-switch-link-color));
 }
 
 .card-switch .cards .card {
@@ -1482,7 +1498,7 @@ span.details-mark {
     margin: 0;
     padding: 0.35rem 1.15rem;
     background-color: transparent;
-    color: rgb(var(--primary-color));
+    color: rgb(var(--tab-switch-link-color));
     border-radius: 0.25rem 0.25rem 0 0;
     transition: all 80ms ease-in-out;
     font-weight: 450 !important;
@@ -1600,6 +1616,29 @@ div.spinner span.spinner::after {
     background: rgba(0, 0, 0, 0.75);
 }
 
+.items-group {
+    min-width: 100%;
+    max-width: unset !important;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.items-group tr th,
+.items-group tr td {
+    border: none !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2) !important;
+    text-align: center;
+}
+
+.items-group tr th {
+    background-color: transparent;
+    cursor: default;
+}
+
+.items-group tr[data-href] {
+    cursor: pointer;
+}
+
 @keyframes dropdown-show {
     0% {
         top: calc(100% - 5px);
@@ -1694,6 +1733,9 @@ div.spinner span.spinner::after {
     }
     .website-intro h2 {
         font-size: 1.5rem;
+    }
+    .slider .slides .slide {
+        padding: 0 3rem;
     }
 }
 
