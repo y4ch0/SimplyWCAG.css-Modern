@@ -1576,7 +1576,7 @@ div.spinner span.spinner::after {
     width: 2.5rem;
     height: 4rem;
     cursor: pointer;
-    z-index: 999;
+    z-index: 9;
     display: flex;
     align-items: center;
     justify-content: center;
