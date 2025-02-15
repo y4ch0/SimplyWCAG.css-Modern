@@ -786,11 +786,12 @@ div.dropdown ul {
     overflow-y: auto;
     z-index: 99;
     background-color: #fff;
-    padding: 0.5rem 0;
+    padding: 0.25rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 0.25rem;
     width: max-content;
     max-width: 300px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 div.dropdown a.toggler::after {
@@ -802,6 +803,7 @@ div.dropdown ul li a {
     display: flex;
     gap: 0.5rem;
     color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.25rem;
 }
 
 div.dropdown.primary ul li a {
