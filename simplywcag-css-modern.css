@@ -714,15 +714,21 @@ details summary {
     color: rgb(var(--details-label-color));
     cursor: pointer;
     margin: -1rem;
+    width: calc(100% + 2rem);
+    max-width: unset !important;
 }
 
 details summary:hover {
     text-decoration: underline;
 }
 
+details summary:focus {
+    outline: 2px dotted #000;
+    outline-offset: -2px;
+}
+
 details[open] summary {
     margin-bottom: 0.5rem;
-    width: 100%;
 }
 
 /*details::details-content {
