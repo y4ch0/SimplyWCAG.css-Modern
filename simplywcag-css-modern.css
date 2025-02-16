@@ -1488,7 +1488,7 @@ span.details-mark {
     padding: 0;
     margin: 0;
     list-style: none;
-    border-bottom: 2px solid rgb(var(--tab-switch-link-color));
+    border-bottom: 3px solid rgb(var(--tab-switch-link-color));
 }
 
 .card-switch .cards .card {
@@ -1638,6 +1638,11 @@ div.spinner span.spinner::after {
     text-align: center;
 }
 
+.items-group tr:not(:first-child):hover {
+    outline: 3px solid rgb(var(--primary-color));
+    outline-offset: -3px;
+}
+
 .items-group tr th {
     background-color: transparent;
     cursor: default;
@@ -1731,6 +1736,7 @@ div.spinner span.spinner::after {
     }
     dialog div.body {
         max-width: 80%;
+        min-width: unset;
         max-height: 70%;
     }
     header.accessibility-tools .wrapper {
@@ -1769,6 +1775,7 @@ div.spinner span.spinner::after {
     }
     dialog div.body {
         max-width: 95%;
+        width: 95%;
         max-height: 80%;
     }
     header.accessibility-tools .wrapper {
