@@ -723,8 +723,8 @@ details summary:hover {
 }
 
 details summary:focus {
-    outline: 2px dotted #000;
-    outline-offset: -2px;
+    outline: 3px dotted #000;
+    outline-offset: -3px;
 }
 
 details[open] summary {
@@ -839,6 +839,11 @@ div.dropdown:has(ul.show) a.toggler::after {
     transition: outline 80ms ease-in-out;
 }
 
+.card.no-padding {
+    padding: 0;
+    border: none;
+}
+
 .card.message-box {
     border: none;
     border-radius: 0;
@@ -925,6 +930,19 @@ div.dropdown:has(ul.show) a.toggler::after {
     background-color: rgba(0, 0, 0, 0.04);
 }
 
+.card.radius-big {
+    border-radius: 1rem;
+}
+
+.card.shadow {
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14), inset 0 0 0px 2px transparent;
+}
+
+.card.radius-big img.card-image {
+    border-radius: 1rem 1rem 0 0;
+}
+
 .card:is(a):hover {
     outline: 0.25rem solid rgb(var(--card-outline-color));
 }
@@ -977,6 +995,14 @@ div.dropdown:has(ul.show) a.toggler::after {
 .block-cards.no-border .card,
 .card.no-border {
     border-color: transparent;
+}
+
+.block-cards.no-border .card img.card-image,
+.card.no-border img.card-image {
+    max-width: calc(100% + 2rem + 4px);
+    width: calc(100% + 2rem + 4px);
+    margin-top: calc(-2px - 1rem);
+    margin-left: calc(-2px - 1rem);
 }
 
 .block-cards.small {
@@ -1646,6 +1672,10 @@ div.spinner span.spinner::after {
 .items-group tr th {
     background-color: transparent;
     cursor: default;
+}
+
+.items-group tr:last-child td {
+    border-bottom: none !important;
 }
 
 .items-group tr[data-href] {
