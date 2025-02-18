@@ -884,6 +884,10 @@ div.dropdown:has(ul.show) a.toggler::after {
     padding: 0.5rem;
 }
 
+.card img {
+    border-radius: 0;
+}
+
 .card.message-box div {
     width: fit-content;
     display: flex;
