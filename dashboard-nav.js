@@ -44,24 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.querySelectorAll(".dialog-close").forEach((item) => {
         item.addEventListener("click", () => {
-            const dialog = document.getElementById(item.dataset.dialog_id);
-            const body = dialog.querySelector(".body");
-            const keyFrame = new KeyframeEffect(body, [{ transform: "scale(1)" }, { transform: "scale(0.8)" }], {
-                duration: 300,
-                easing: "ease",
-                direction: "normal",
-            });
-            const keyFrame1 = new KeyframeEffect(dialog, [{ opacity: "1" }, { opacity: "0" }], {
-                duration: 300,
-                easing: "ease",
-                direction: "normal",
-            });
-
-            const animation = new Animation(keyFrame, document.timeline);
-            const animation1 = new Animation(keyFrame1, document.timeline);
-            animation.play();
-            animation1.play();
-            animation.onfinish = () => dialog.close();
+            document.getElementById(item.dataset.dialog_id).removeAttribute("open");
         });
     });
     // custom tooltip
