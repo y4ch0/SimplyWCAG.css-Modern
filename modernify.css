@@ -556,11 +556,28 @@ form p {
     outline-offset: -1px;
 }
 
+.form-control:is(label):has(input[type="radio"], input[type="checkbox"]) {
+    font-size: 0.95rem;
+    color: #000;
+    display: flex;
+    gap: 0.35rem;
+    align-items: center;
+    font-weight: 450;
+    padding-left: 0.5rem;
+}
+
 input[type="range"] {
     padding: 0;
     margin-bottom: 1rem;
     cursor: e-resize;
     outline-offset: 1px !important;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
 }
 
 input[type="file"] {
@@ -711,11 +728,13 @@ details {
 }
 
 details summary {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     padding: 0.75rem 1rem;
     color: rgb(var(--details-label-color));
     cursor: pointer;
     margin: -1rem;
+    transition: margin-bottom 0.3s ease;
     width: calc(100% + 2rem);
     max-width: unset !important;
 }
