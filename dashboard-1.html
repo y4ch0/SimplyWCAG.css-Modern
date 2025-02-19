@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="modernify-dashboard.css" />
+        <script src="accessibility.js"></script>
+        <script src="utility.js"></script>
+    </head>
+    <body>
+        <!--<header class="accessibility-tools">
+            <div class="wrapper">
+                <div class="row">
+                    <p>Wielkość tekstu:</p>
+                    <a href="#" class="at-fs-1" title="Normalny rozmiar tekstu">A</a>
+                    <a href="#" class="at-fs-2" title="Powiększony rozmiar tekstu">AA</a>
+                    <a href="#" class="at-fs-3" title="Największy rozmiar tekstu">AAA</a>
+                </div>
+                <div class="row">
+                    <p>Kontrast:</p>
+                    <a href="#" class="at-c-1" title="Tryb kontrastu wyłączony">A</a>
+                    <a href="#" class="at-c-2" title="Tryb kontrastu: Zielono (tekst)-Czarny (tło)">A</a>
+                    <a href="#" class="at-c-3" title="Tryb kontrastu: Czarno (tekst)-Żółty (tło)">A</a>
+                    <a href="#" class="at-c-4" title="Tryb kontrastu: Żółto (tekst)-Czarny (tło)">A</a>
+                    <a href="#" class="at-c-5" title="Tryb kontrastu: Biało (tekst)-Czarny (tło)">A</a>
+                </div>
+            </div>
+        </header>-->
+        <nav>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="#" class="website-logo">
+                        <img src="logo.svg" alt="" />
+                        Modernify.Dashboard
+                    </a>
+                </div>
+                <button class="nav-collapse">
+                    <img src="list.svg" alt="Navigation menu open icon" />
+                </button>
+            </div>
+        </nav>
+        <main>
+            <nav class="app-nav" id="nav-menu">
+                <button class="nav-collapse">
+                    <img src="x-lg.svg" alt="Navigation menu close icon" />
+                </button>
+                <ul class="nav">
+                    <li class="current">
+                        <a href="#">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg"
+                                alt=""
+                            />
+                            Serwery
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg"
+                                alt=""
+                            />
+                            Użytkownicy
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg"
+                                alt=""
+                            />
+                            Uprawnienia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg"
+                                alt=""
+                            />
+                            <abbr title="Poświadczenia">Poświadcz.</abbr>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="app-view">
+                <nav class="view-nav">
+                    <ul class="nav">
+                        <li class="current">
+                            <a href="#">Strona główna</a>
+                        </li>
+                        <li><a href="#">Zarządzaj serwerami</a></li>
+                        <li>
+                            <div class="dropdown inline">
+                                <a href="#" class="toggler">Wirtualne maszyny</a>
+                                <ul>
+                                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                    <li><a href="#">Lorem, ipsum dolor.</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="wrapper">
+                    <header class="website-warning">
+                        <p><strong>WAŻNY KOMUNIKAT: </strong>Podejrzana aktywność w serwerze OPDS-23-A (zwiększona liczba requestów)</p>
+                    </header>
+                    <div class="row">
+                        <div class="col">
+                            <h2>Aktywność użytkowników</h2>
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGK6nPQYgQMmCWL0EZdB_cQJq15Cu6UQrNtg&s"
+                                style="width: 100%"
+                            />
+                        </div>
+                        <div class="col">
+                            <h2>Stan serwerów</h2>
+                            <div class="table">
+                                <table>
+                                    <tr>
+                                        <th>Serwer</th>
+                                        <th>Temp (pom.)</th>
+                                        <th>Zużycie RAM</th>
+                                        <th>Requesty</th>
+                                    </tr>
+                                    <tr>
+                                        <td>OPDS-21-A</td>
+                                        <td>21</td>
+                                        <td>82%</td>
+                                        <td>7721</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OPDS-22-A</td>
+                                        <td>21</td>
+                                        <td>82%</td>
+                                        <td>2517</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OPDS-23-A</td>
+                                        <td>21</td>
+                                        <td>82%</td>
+                                        <td>9901</td>
+                                    </tr>
+                                    <tr>
+                                        <td>OPDS-24-A</td>
+                                        <td>21</td>
+                                        <td>82%</td>
+                                        <td>5512</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="wrapper">
+                <p>&copy; 2025 y4ch0</p>
+                <div class="row">
+                    <div class="col">
+                        <h4>Oddziały</h4>
+                        <ul>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Administracja</h4>
+                        <ul>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h4>Fundusze Europejskie</h4>
+                        <ul>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                            <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <dialog id="patient-warning">
+            <div class="body">
+                <h2>
+                    Komunikat Dyrekcji
+                    <abbr
+                        title="Szpital Kliniczny
+                    Ministerstwa Spraw Wewnętrznych i Administracji
+                    z Warmińsko - Mazurskim Centrum Onkologii
+                    w Olsztynie"
+                        >Szpitala MSWiA</abbr
+                    >
+                </h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, fuga.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias totam atque aut error quos consequatur recusandae. Dolore cum
+                    assumenda iste, praesentium et non nisi error deserunt quae eius nam, necessitatibus debitis sit alias! Repellat debitis libero,
+                    dolores, corrupti sed minima delectus odit, incidunt illum ducimus excepturi nostrum quidem. Perferendis magni totam delectus
+                    dignissimos. Repellat, porro reprehenderit eligendi officia beatae sit obcaecati commodi quaerat quas! Vitae est sequi deserunt
+                    voluptate iste provident numquam ipsa saepe quam, maxime officia minima accusamus obcaecati odit ratione incidunt, vel quaerat
+                    porro inventore dolor doloremque aliquid eligendi, sunt quo? Accusantium animi repellat quos laudantium mollitia ea, excepturi
+                    eveniet voluptatum dignissimos nulla, soluta dolor! Delectus esse velit iusto numquam ducimus repellat culpa, recusandae debitis
+                    natus impedit ex, corrupti consequatur! Doloremque ipsum harum, sapiente obcaecati voluptate odio vero necessitatibus asperiores,
+                    amet veniam eaque aliquid quam, nisi molestias consectetur commodi alias. Nulla praesentium facilis temporibus! Sequi temporibus
+                    consequuntur voluptas expedita iure quasi obcaecati nihil repudiandae placeat voluptatibus, laudantium tempore voluptates quia hic
+                    iste quis error facere adipisci? Ratione, eum consectetur nam magni placeat ipsum, iusto quo impedit eos, reiciendis fugiat
+                    pariatur corrupti debitis earum natus cum! Animi molestiae cumque qui veritatis dolorem, vero neque asperiores provident expedita,
+                    itaque amet?
+                </p>
+                <button class="dialog-close" data-dialog_id="patient-warning">&times;</button>
+            </div>
+        </dialog>
+    </body>
+</html>

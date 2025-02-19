@@ -370,6 +370,26 @@ footer div.wrapper .row {
     gap: 1rem;
 }
 
+main div.wrapper .row {
+    background-color: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+main div.wrapper .row:has(.col:only-child) {
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14), inset 0 0 0px 2px transparent;
+    padding: 1rem;
+    border-radius: 0.35rem;
+}
+
+main div.wrapper .row .col {
+    background-color: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14), inset 0 0 0px 2px transparent;
+    padding: 1rem;
+    border-radius: 0.35rem;
+}
+
 main div.wrapper .row .col,
 footer div.wrapper .row .col {
     width: 100%;
