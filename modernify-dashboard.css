@@ -16,6 +16,8 @@
     --wrapper-width-bp-2: 82vw;
     --wrapper-width-bp-3: 92vw;
     --intro-height: 30rem;
+    --app-nav-width: 5rem;
+    --view-nav-width: 15rem;
     --input-label-color: var(--primary-color);
     --sidenav-text-color: var(--primary-color);
     --navbar-text-color: var(--primary-color);
@@ -53,27 +55,7 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     font-size: 1rem;
-}
-
-/*.form-control:focus,
-.button:focus,
-a:focus {
-    outline: 0.25rem solid rgb(var(--primary-color)) !important;
-    outline-offset: 3px;
-}*/
-
-header.gov-mark {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    max-width: 100vw !important;
-    width: 100vw;
-    padding-bottom: 0;
-    border-bottom: 0.5rem solid #e93939;
-    gap: 0.5rem;
-    font-size: 0.8rem;
+    background-color: #f5f5f5;
 }
 
 header.accessibility-tools {
@@ -147,57 +129,6 @@ header.accessibility-tools .at-c-5 {
     background-color: #000 !important;
 }
 
-header.gov-mark #explanation p {
-    font-size: 1rem;
-}
-
-header.gov-mark .wrapper {
-    width: var(--wrapper-width);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-header.gov-mark .wrapper .row {
-    display: flex;
-    width: 100%;
-    gap: 0.5rem;
-}
-
-header.gov-mark .wrapper .row .col {
-    width: 100%;
-}
-
-header.gov-mark a.toggler {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: underline;
-}
-
-header.gov-mark a.toggler:hover {
-    color: #fff;
-    text-decoration: none;
-}
-
-header.gov-mark p.header-paragraph {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
-header.gov-mark img.flag {
-    height: 20px;
-    border-radius: 0;
-}
-
-header.gov-mark #explanation {
-    display: none;
-}
-
-header.gov-mark #explanation.show {
-    display: flex;
-}
-
 header.website-warning {
     width: 100%;
     display: flex;
@@ -208,14 +139,16 @@ header.website-warning {
 }
 
 nav {
-    width: 100%;
+    width: 100vw;
+    height: 3.5rem;
     display: flex;
-    background-color: #f7f7f7;
+    background-color: #fff;
     padding: 1.25rem;
     justify-content: center;
     color: var(--primary-color);
     position: sticky;
     top: 0;
+    left: 0;
     z-index: 100;
     font-weight: 500;
     box-shadow: rgba(99, 99, 99, 0.1) 0px 5px 8px 0px;
@@ -225,12 +158,13 @@ nav .wrapper {
     display: flex;
     gap: 1rem;
     align-items: center;
-    justify-content: space-between;
-    width: var(--wrapper-width);
+    width: 100%;
 }
 
 nav div.logo {
     max-width: calc(100% - 5rem);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding-right: 0.5rem;
 }
 
 nav a {
@@ -238,7 +172,7 @@ nav a {
 }
 
 nav:has(a > img) {
-    padding: 0.75rem;
+    padding: 0.5rem;
 }
 
 nav a:has(img) {
@@ -250,7 +184,7 @@ nav a:has(img) {
 }
 
 nav a img {
-    max-height: 4rem;
+    max-height: 2.5rem;
     padding: 0;
     margin: 0;
     border-radius: 0;
@@ -277,13 +211,9 @@ nav ul.nav li a {
     gap: 0.5rem;
 }
 
-nav.side-nav ul.nav li.current a {
-    background-color: rgba(var(--sidenav-text-color), 0.1);
-}
-
 nav button.nav-collapse {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     align-items: center;
     justify-content: center;
     border: none;
@@ -301,107 +231,124 @@ nav button.nav-collapse img {
     opacity: 0.75;
 }
 
+nav.app-nav {
+    width: var(--app-nav-width);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 3.5rem);
+    justify-content: start;
+    position: fixed;
+    top: 3.5rem;
+    font-size: 0.8rem !important;
+    text-align: center;
+    padding: 0.25rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+nav.app-nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.25rem;
+}
+
+nav.app-nav ul li a {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.8rem !important;
+    gap: 0.15rem;
+    outline: none !important;
+    transition: background-color 100ms ease-in-out;
+    border-radius: 0.35rem;
+    border: 1px solid transparent;
+}
+
+nav.app-nav ul li a:hover,
+nav.app-nav ul li.current a {
+    background-color: rgba(var(--sidenav-text-color), 0.05);
+    border: 1px solid rgba(var(--sidenav-text-color), 0.075);
+}
+
+nav.app-nav ul li a:has(img) {
+    padding-top: 0.25rem;
+}
+
+nav.app-nav ul li a img {
+    max-height: 2rem;
+}
+
+nav.view-nav {
+    width: var(--view-nav-width);
+    height: max-content;
+    top: 5rem;
+    background-color: transparent;
+    box-shadow: none;
+    color: #000;
+}
+
+nav.view-nav ul {
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+nav.view-nav ul li a {
+    color: #000;
+    font-size: 0.95rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    display: flex;
+    gap: 0.35rem;
+    transition: background-color 80ms ease-in-out;
+    font-weight: 450;
+}
+
+nav.view-nav ul li a:has(img) {
+    padding-left: 0.25rem;
+    outline: none !important;
+}
+
+nav.view-nav ul li a img {
+    max-height: 1.35rem;
+}
+
+nav.view-nav ul li.current a {
+    background-color: rgb(var(--primary-color), 0.075);
+}
+
+nav.view-nav ul li a:hover {
+    background-color: rgb(var(--primary-color), 0.075);
+    text-decoration: none;
+}
+
 main {
     width: 100vw;
     max-width: 100vw !important;
     display: flex;
-    justify-content: center;
     gap: 1rem;
-    padding-top: 3rem;
 }
 
-.website-intro {
-    display: flex;
-    flex-direction: column;
-    height: var(--intro-height);
-    align-items: center;
-    justify-content: center;
-    gap: 0.25rem !important;
-    background-image: url("intro-bg.png");
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
-.website-intro .row .col {
-    display: flex;
-    justify-content: center;
-}
-
-.website-intro h1.header-intro {
-    font-size: 3rem;
-    background: #1a329c;
-    background: linear-gradient(to right, #1a329c 0%, #452bb9 100%);
-    background-clip: text;
-    font-weight: 750;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-}
-
-.website-intro h2 {
-    font-weight: 500;
-    text-align: center;
-}
-
-main nav.side-nav {
-    width: 15vw;
-    position: sticky;
-    top: 7rem;
-    height: 100%;
-    overflow-y: auto;
-    background-color: transparent;
-    border: 0.25rem solid rgba(0, 0, 0, 0.05);
-    border-radius: 0.4rem;
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    box-shadow: none !important;
-    z-index: 1;
-}
-
-main nav.side-nav ul li ul {
-    list-style: square !important;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-main nav.side-nav ul.nav {
-    flex-direction: column;
+main .app-view {
     width: 100%;
-    gap: 0.3rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 5;
 }
 
-main nav.side-nav ul.nav li,
-main nav.side-nav ul.nav li a {
-    width: 100%;
-    color: rgb(var(--sidenav-text-color));
-}
-
-main nav.side-nav ul.nav li a {
-    padding: 0.3rem 0.5rem;
-    border-radius: 0.25rem;
-    transition: background-color 80ms ease-in-out;
-}
-
-main nav.side-nav ul.nav li:not(:last-child)::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgba(0, 0, 0, 0.1);
-    position: absolute;
-    bottom: -0.15rem;
-}
-
-main nav.side-nav ul.nav li a:hover {
-    background-color: rgba(var(--primary-color), 0.1);
+main:has(nav.app-nav) .app-view {
+    margin-left: var(--app-nav-width);
 }
 
 main div.wrapper {
-    width: var(--wrapper-width);
+    width: calc(100vw - var(--app-nav-width - 4rem));
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+main:has(nav.view-nav) div.wrapper {
+    width: calc(100vw - var(--app-nav-width) - var(--view-nav-width) - 4rem);
 }
 
 main:has(aside) div.wrapper {
@@ -1438,51 +1385,6 @@ pre {
     border-radius: 0.25rem;
 }
 
-aside {
-    width: 200px;
-    height: 100% !important;
-    position: sticky;
-    top: 7rem;
-    border-left: 1px solid rgba(0, 0, 0, 0.1);
-    padding-left: 1rem;
-}
-
-aside ul.aside-items {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    list-style: none;
-    width: 100%;
-    margin: 0;
-}
-
-aside ul.aside-items li {
-    width: 100%;
-}
-
-aside ul.aside-items li a {
-    font-size: 0.95rem;
-    padding: 0.25rem 0;
-    width: 100%;
-    display: flex;
-    color: #000 !important;
-}
-
-aside ul.aside-items li a:hover::after,
-aside ul.aside-items li.current a::after {
-    content: "";
-    height: 100%;
-    width: 0.2rem;
-    position: absolute;
-    left: calc(-1rem - 1px);
-    top: 0;
-    background-color: rgb(var(--primary-color));
-}
-
-aside ul.aside-items li.current a {
-    font-weight: bold;
-}
-
 .summary-box {
     width: 100%;
     padding: 1rem 1.5rem;
@@ -1735,18 +1637,12 @@ div.spinner span.spinner::after {
 }
 
 @media screen and (max-width: 1280px) {
-    header.gov-mark .wrapper,
-    nav .wrapper,
     main div.wrapper,
     footer .wrapper {
         width: var(--wrapper-width-bp-1);
     }
     nav ul.nav {
         display: flex;
-    }
-    main {
-        flex-direction: column;
-        align-items: center;
     }
     aside {
         display: none;
@@ -1762,7 +1658,6 @@ div.spinner span.spinner::after {
 
 @media screen and (max-width: 1024px) {
     header.gov-mark .wrapper,
-    nav .wrapper,
     main div.wrapper,
     footer .wrapper {
         width: var(--wrapper-width-bp-2);
@@ -1770,7 +1665,19 @@ div.spinner span.spinner::after {
     main .wrapper .row {
         flex-direction: column;
     }
-    nav:not(.side-nav) ul.nav {
+    main div.wrapper {
+        width: calc(100vw - 4rem);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    main:has(nav.view-nav) div.wrapper {
+        width: calc(100vw - var(--view-nav-width) - 4rem);
+    }
+    main:has(nav.app-nav) .app-view {
+        margin-left: 0;
+    }
+    nav.app-nav {
         position: fixed;
         top: 0;
         left: 0;
@@ -1785,7 +1692,10 @@ div.spinner span.spinner::after {
         font-size: 1.5rem;
         display: none;
     }
-    nav ul.nav button.nav-collapse {
+    nav.app-nav ul li a {
+        font-size: 1rem !important;
+    }
+    nav.app-nav button.nav-collapse {
         position: absolute;
         top: 0;
         right: 0;
@@ -1815,7 +1725,6 @@ div.spinner span.spinner::after {
 
 @media screen and (max-width: 768px) {
     header.gov-mark .wrapper,
-    nav .wrapper,
     main div.wrapper,
     footer .wrapper {
         width: var(--wrapper-width-bp-3);
@@ -1826,6 +1735,22 @@ div.spinner span.spinner::after {
     main .wrapper .row,
     footer .wrapper .row {
         flex-direction: column;
+    }
+    main .app-view {
+        flex-direction: column;
+        margin: 0;
+    }
+    main nav.view-nav {
+        width: 100%;
+        position: static;
+    }
+    main nav.view-nav ul {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
+    main:has(nav.view-nav) div.wrapper {
+        width: 100%;
+        padding: 0 2rem;
     }
     nav {
         padding: 0.75rem !important;
