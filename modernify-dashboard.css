@@ -304,6 +304,14 @@ nav.view-nav ul li a {
     font-weight: 450;
 }
 
+nav.view-nav ul li .dropdown {
+    width: 100%;
+}
+
+nav.view-nav ul li .dropdown .toggler {
+    width: 100%;
+}
+
 nav.view-nav ul li a:has(img) {
     padding-left: 0.25rem;
     outline: none !important;
@@ -757,7 +765,31 @@ div.dropdown ul {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-div.dropdown a.toggler::after {
+div.dropdown.inline {
+    flex-direction: column;
+    animation: height 100ms ease-in-out;
+    height: auto;
+    overflow-y: hidden;
+}
+
+div.dropdown.inline ul {
+    position: static;
+    box-shadow: none;
+    width: 100% !important;
+    max-width: unset;
+    background-color: transparent;
+    border: none;
+}
+
+div.dropdown.inline ul li a {
+    padding: 0.25rem 1rem;
+}
+
+div.dropdown.inline .toggler {
+    align-items: center;
+}
+
+div.dropdown .toggler::after {
     content: " \25bc";
 }
 

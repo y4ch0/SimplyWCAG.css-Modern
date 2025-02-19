@@ -169,12 +169,12 @@ header.gov-mark .wrapper .row .col {
     width: 100%;
 }
 
-header.gov-mark a.toggler {
+header.gov-mark .toggler {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: underline;
 }
 
-header.gov-mark a.toggler:hover {
+header.gov-mark .toggler:hover {
     color: #fff;
     text-decoration: none;
 }
@@ -810,7 +810,7 @@ div.dropdown ul {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-div.dropdown a.toggler::after {
+div.dropdown .toggler::after {
     content: " \25bc";
 }
 
