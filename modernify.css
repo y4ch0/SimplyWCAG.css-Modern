@@ -600,6 +600,7 @@ input[type="file"]::file-selector-button:hover {
 
 textarea {
     resize: vertical;
+    min-height: 4rem;
 }
 
 .form-group {
@@ -1530,6 +1531,26 @@ span.details-mark {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+.card-switch.big-buttons ul.togglers {
+    width: 100%;
+    border-bottom: none;
+    background-color: #f2f2f2;
+    padding: 0.25rem;
+    border-radius: 0.75rem;
+    gap: 0.25rem;
+    overflow-x: auto;
+}
+
+.card-switch.big-buttons ul.togglers li a,
+.card-switch.big-buttons ul.togglers li {
+    width: 100%;
+}
+
+.card-switch.big-buttons ul.togglers li a {
+    font-size: 1.6rem !important;
+    border-radius: 0.5rem !important;
 }
 
 .card-switch ul.togglers {

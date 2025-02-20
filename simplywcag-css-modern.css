@@ -533,6 +533,11 @@ form p {
     margin: 0;
 }
 
+textarea {
+    resize: vertical;
+    min-height: 4rem;
+}
+
 .form-control {
     width: 100%;
     font-size: 1rem;
