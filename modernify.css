@@ -1056,6 +1056,7 @@ dialog {
     background-color: rgba(0, 0, 0, 0.2);
     border: none;
     z-index: 9999;
+    padding: 0;
 }
 
 dialog[open] {
