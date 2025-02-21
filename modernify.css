@@ -838,7 +838,7 @@ div.dropdown ul li a:hover {
 
 div.dropdown ul.show {
     display: block;
-    animation: dropdown-show 0.15s ease-in-out forwards;
+    animation: dropdown-show 0.2s ease forwards;
 }
 
 div.dropdown:has(ul.show) a.toggler::after {
@@ -1736,14 +1736,12 @@ div.spinner span.spinner::after {
 
 @keyframes dropdown-show {
     0% {
-        top: calc(100% - 5px);
+        top: calc(100% - 10px);
         opacity: 0;
-        transform: scale(0.97);
     }
     100% {
         top: 100%;
         opacity: 1;
-        transform: scale(1);
     }
 }
 
